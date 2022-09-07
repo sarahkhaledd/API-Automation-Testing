@@ -1,0 +1,248 @@
+{
+	"info": {
+		"_postman_id": "2ce329aa-4fde-4b93-8bb5-d95555bbe5da",
+		"name": "Authors",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15938730"
+	},
+	"item": [
+		{
+			"name": "List Authors",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"List All Authors\",function()\r",
+							"{\r",
+							"    pm.expect(pm.response.code).to.equal(200),\r",
+							"    pm.expect(pm.response.status).to.equal(\"OK\")\r",
+							"}\r",
+							")\r",
+							"pm.test(\"Body matches string\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"id\") && \r",
+							"    pm.expect(pm.response.text()).to.include(\"idBook\") &&\r",
+							"    pm.expect(pm.response.text()).to.include(\"firstName\") &&\r",
+							"    pm.expect(pm.response.text()).to.include(\"lastName\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Url}}v1/Authors",
+					"host": [
+						"{{Url}}v1"
+					],
+					"path": [
+						"Authors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register Author",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Successful POST request\", function () {\r",
+							"    pm.expect(pm.response.code).to.be.oneOf([201, 200]);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": {{id}},\r\n  \"idBook\": 0,\r\n  \"firstName\": {{firstName}},\r\n  \"lastName\": {{lastName}}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Url}}v1/Authors",
+					"host": [
+						"{{Url}}v1"
+					],
+					"path": [
+						"Authors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register Author NegativeScenario",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 400\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": {{id}},\r\n  \"idBook\": 0,\r\n  \"lastName\": {{lastName}}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Url}}v1/Authors",
+					"host": [
+						"{{Url}}v1"
+					],
+					"path": [
+						"Authors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Books",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var response = pm.response.json();\r",
+							"var i = 0;\r",
+							"pm.test(\"Books Contain same ID\",function()\r",
+							"{\r",
+							"    while(i<response.length)\r",
+							"    {\r",
+							"        pm.expect(response[i].idBook).to.equal(1);\r",
+							"        i++;\r",
+							"   }\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Url}}v1/Authors/authors/books/1",
+					"host": [
+						"{{Url}}v1"
+					],
+					"path": [
+						"Authors",
+						"authors",
+						"books",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Information",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Updated successfully\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"var jsonData = pm.response.json();\r",
+							"pm.test(\"updated Information\", function () {\r",
+							"    pm.expect(jsonData.firstName).to.eql(\"sarah\") \r",
+							"    && pm.expect(jsonData.lastName).to.eql(\"mohamed\") ;\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"firstName\": {{firstName}},\r\n  \"lastName\": {{updated}}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Url}}v1/Authors/1",
+					"host": [
+						"{{Url}}v1"
+					],
+					"path": [
+						"Authors",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Check Updated-Info",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = pm.response.json();\r",
+							"pm.test(\"updated Information\", function () {\r",
+							"    pm.expect(jsonData.firstName).to.eql(\"sarah\") \r",
+							"    && pm.expect(jsonData.lastName).to.eql(\"mohamed\") ;\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Url}}v1/Authors/1",
+					"host": [
+						"{{Url}}v1"
+					],
+					"path": [
+						"Authors",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
