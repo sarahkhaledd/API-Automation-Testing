@@ -1,4 +1,5 @@
-# API-Automation-Testing\Project Introduction:
+# API-Automation-Testing
+Project Introduction:
 This project requires you to test Trello's REST APIs using Postman.
 
 Trello is a team management web application where teams can collaborate, manage projects, and reach new productivity peaks.
