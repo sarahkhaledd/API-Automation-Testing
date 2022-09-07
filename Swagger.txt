@@ -1,0 +1,42 @@
+ API: GET /api/v1/Authors
+ Test Case: response should be 200 OK
+ Expected Result: 200 OK
+ Actual Result: 200 OK
+ Status: Pass
+ ---------------------------------------
+ API: GET /api/v1/Authors
+ Test Case: response should be 200 OK and Contain, id, idBook, firstName, lastName.
+ Expected Result: 200 OK Contain, id, idBook, firstName, lastName.
+ Actual Result: 200 OK Contain, id, idBook, firstName, lastName.
+ Status: Pass
+ ---------------------------------------
+  API: POST /api/v1/Authors
+ Test Case: response should be 201 Created
+ Expected Result: 201 Created OR 200 OK
+ Actual Result: 200 OK
+ Status: Pass
+ ----------------------------------------
+ API: POST /api/v1/Authors
+ Test Case: response should be 400 
+ Expected Result: 400 UserName is mandatory
+ Actual Result: 200 OK
+ Status: Fail
+ -----------------------------------------
+ API: GET /api/v1/Authors/authors/books/1
+ Test Case: response should be 200 with response body contain idBook = 1 
+ Expected Result: 200 OK 
+ Actual Result: 200 OK
+ Status: Pass
+ -----------------------------------------
+ API: PUT /api/v1/Authors/1
+ Test Case: response should be 200 with updatted information successfully
+ Expected Result: 200 OK 
+ Actual Result: 200 OK
+ Status: Pass
+ -----------------------------------------
+ API: GET /api/v1/Authors/1
+ Test Case: response should be 200 with updatted information 
+ Expected Result: 200 OK with updatted information 
+ Actual Result: 200 OK with NON-updatted information 
+ Status: fail
+ -----------------------------------------
