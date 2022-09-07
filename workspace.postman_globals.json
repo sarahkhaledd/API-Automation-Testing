@@ -1,0 +1,39 @@
+{
+	"id": "257c9d69-9b5a-4473-85ac-1d7efbedea61",
+	"values": [
+		{
+			"key": "Url",
+			"value": "http://fakerestapi.azurewebsites.net/api/",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "firstName",
+			"value": "\"sarah\"",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "lastName",
+			"value": "\"Khaled\"\n\n",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "id",
+			"value": "21",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "updated",
+			"value": "\"mohamed\"\n",
+			"type": "default",
+			"enabled": true
+		}
+	],
+	"name": "Globals",
+	"_postman_variable_scope": "globals",
+	"_postman_exported_at": "2022-09-07T22:46:51.132Z",
+	"_postman_exported_using": "Postman/9.31.2-220907-1409"
+}
