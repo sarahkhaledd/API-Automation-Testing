@@ -29,14 +29,14 @@
  Status: Pass
  -----------------------------------------
  API: PUT /api/v1/Authors/1
- Test Case: response should be 200 with updatted information successfully
+ Test Case: response should be 200 with updated information successfully
  Expected Result: 200 OK 
  Actual Result: 200 OK
  Status: Pass
  -----------------------------------------
  API: GET /api/v1/Authors/1
- Test Case: response should be 200 with updatted information 
- Expected Result: 200 OK with updatted information 
- Actual Result: 200 OK with NON-updatted information 
+ Test Case: response should be 200 with updated information 
+ Expected Result: 200 OK with updated information 
+ Actual Result: 200 OK with NON-updated information 
  Status: fail
  -----------------------------------------
