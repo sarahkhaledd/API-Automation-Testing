@@ -1,0 +1,100 @@
+{
+    "id": "63192f35de73eb02852df80b",
+    "aaId": "5e5c43cf3011ed0c8f8c5714",
+    "activityBlocked": false,
+    "avatarHash": "eb56f1f7991909bb5d1876c52f4fbe9f",
+    "avatarUrl": "https://trello-members.s3.amazonaws.com/63192f35de73eb02852df80b/eb56f1f7991909bb5d1876c52f4fbe9f",
+    "bio": "",
+    "bioData": null,
+    "confirmed": true,
+    "fullName": "Sarah Khaled",
+    "idEnterprise": null,
+    "idEnterprisesDeactivated": [],
+    "idMemberReferrer": null,
+    "idPremOrgsAdmin": [],
+    "initials": "SK",
+    "memberType": "normal",
+    "nonPublic": {},
+    "nonPublicAvailable": true,
+    "products": [],
+    "url": "https://trello.com/sarahkhaled24",
+    "username": "sarahkhaled24",
+    "status": "disconnected",
+    "aaBlockSyncUntil": null,
+    "aaEmail": null,
+    "aaEnrolledDate": null,
+    "avatarSource": "none",
+    "credentialsRemovedCount": 0,
+    "domainClaimed": null,
+    "email": "sarahkhaledd2000@gmail.com",
+    "goldSunsetFreeTrialIdOrganization": null,
+    "gravatarHash": "211932443b7eed8450836cc48b291803",
+    "idBoards": [
+        "63192fd479d9940093c6cbc8"
+    ],
+    "idOrganizations": [
+        "63192f5502ed0c007e8097ce"
+    ],
+    "idEnterprisesAdmin": [],
+    "limits": {
+        "boards": {
+            "totalPerMember": {
+                "status": "ok",
+                "disableAt": 4500,
+                "warnAt": 3600
+            }
+        },
+        "orgs": {
+            "totalPerMember": {
+                "status": "ok",
+                "disableAt": 850,
+                "warnAt": 680
+            }
+        }
+    },
+    "loginTypes": [
+        "atlassian"
+    ],
+    "marketingOptIn": {
+        "optedIn": true,
+        "date": "2022-09-07T23:54:32.440Z"
+    },
+    "messagesDismissed": [],
+    "oneTimeMessagesDismissed": [
+        "sent-possible-new-signup-event",
+        "close-menu-of-first-board"
+    ],
+    "prefs": {
+        "privacy": {
+            "fullName": "public",
+            "avatar": "public"
+        },
+        "sendSummaries": true,
+        "minutesBetweenSummaries": 60,
+        "minutesBeforeDeadlineToNotify": 1440,
+        "colorBlind": false,
+        "locale": "en-US"
+    },
+    "trophies": [],
+    "uploadedAvatarHash": null,
+    "uploadedAvatarUrl": null,
+    "premiumFeatures": [
+        "additionalBoardBackgrounds",
+        "additionalStickers",
+        "customBoardBackgrounds",
+        "customEmoji",
+        "customStickers",
+        "plugins"
+    ],
+    "isAaMastered": true,
+    "ixUpdate": "13",
+    "boards": [
+        {
+            "id": "63192fd479d9940093c6cbc8",
+            "name": "Trello-Task",
+            "closed": false,
+            "idOrganization": "63192f5502ed0c007e8097ce",
+            "pinned": false
+        }
+    ]
+}
