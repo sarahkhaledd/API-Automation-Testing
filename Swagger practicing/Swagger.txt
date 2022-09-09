@@ -12,9 +12,9 @@
  ---------------------------------------
   API: POST /api/v1/Authors
  Test Case: response should be 201 Created
- Expected Result: 201 Created OR 200 OK
+ Expected Result: 201 Created 
  Actual Result: 200 OK
- Status: Pass
+ Status: Fail
  ----------------------------------------
  API: POST /api/v1/Authors
  Test Case: response should be 400 
